@@ -1,4 +1,4 @@
-// Declaring the required Arduino Pins
+// Declaring the required Arduino pins
 const int trigPin = 2;
 const int analogPin = A0;
 
