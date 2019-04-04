@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="gradientcolorStart">#9cecfb</color>
+    <color name="gradientcolorMid">#65c7f7</color>
+    <color name="gradientcolorEnd">#0052d4</color>
 </resources>
