@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@drawable/background_gradient"
     android:orientation="vertical"
-    tools:context=".InsightActivity"
-    android:layout_gravity="center">
+    tools:context=".InsightActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp">
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PEHCHAAN"
             android:layout_marginTop="10dp"
+            android:text="PEHCHAAN"
             android:textAlignment="center"
             android:textColor="@color/gradientcolorMid"
             android:textSize="24sp"
@@ -33,11 +32,11 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="THE IDENTIFIER"
+            android:paddingBottom="10dp"
+            android:text="the identifier"
             android:textAlignment="center"
             android:textColor="@color/gradientcolorStart"
             android:textSize="18sp"
-            android:paddingBottom="10dp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -87,12 +86,12 @@
 
         <LinearLayout
             android:id="@+id/sensorBtn"
-            android:padding="10dp"
             android:layout_width="310dp"
             android:layout_height="310dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/animation_gradient"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
 
             <RelativeLayout
@@ -111,11 +110,12 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_m1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/button_gradient"
                         android:paddingTop="30dp"
-                        android:text="90% "
+                        android:text="90%"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFF"
@@ -141,13 +141,14 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_m2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="4dp"
-                        android:layout_marginRight="70dp"
+                        android:layout_marginEnd="70dp"
                         android:background="@drawable/button_gradient"
                         android:paddingTop="30dp"
-                        android:text="90% "
+                        android:text="90%"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFF"
@@ -155,12 +156,13 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_m3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="4dp"
                         android:background="@drawable/button_gradient"
                         android:paddingTop="30dp"
-                        android:text="90% "
+                        android:text="90%"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFF"
@@ -187,12 +189,13 @@
                         android:layout_weight="1" />
 
                     <TextView
+                        android:id="@+id/tv_m4"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/button_gradient"
                         android:paddingTop="30dp"
-                        android:text="90% "
+                        android:text="90%"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFF"
@@ -209,9 +212,6 @@
             </RelativeLayout>
 
 
-
-
-
         </LinearLayout>
 
         <RelativeLayout
@@ -223,8 +223,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="97dp"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
                 android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
                 android:layout_gravity="center"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="100dp"
@@ -249,9 +249,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textColor="#FFF"
             android:layout_centerHorizontal="true"
-            android:text="Material 3" />
+            android:text="Material 3"
+            android:textColor="#FFF" />
 
 
     </RelativeLayout>
@@ -269,9 +269,9 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginEnd="150dp"
             android:background="@drawable/button_gradient_red"
-            android:layout_marginRight="150dp"
-            android:text="Start "
+            android:text="Start"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/gradientcolorStart"

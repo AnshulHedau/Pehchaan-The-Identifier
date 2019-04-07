@@ -2,7 +2,7 @@
 const int trigPin = 2;
 const int analogPin = A0;
 
-// Declaring a global analog value
+// Declaring a global variable
 long analog_value;
 
 void setup() {

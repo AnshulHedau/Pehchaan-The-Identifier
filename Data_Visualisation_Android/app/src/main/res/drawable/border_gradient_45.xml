@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
@@ -41,8 +41,11 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
             <corners android:radius="200dp" />
-            <gradient android:type="radial" android:gradientRadius="600"
-                android:startColor="#464646" android:endColor="#252021" />
+            <gradient
+                android:endColor="#252021"
+                android:gradientRadius="600"
+                android:startColor="#464646"
+                android:type="radial" />
         </shape>
     </item>
 
