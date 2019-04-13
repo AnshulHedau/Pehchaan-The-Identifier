@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pehchaan</string>
+    <string name="animation_time">100</string>
 </resources>
