@@ -5,7 +5,6 @@
             android:shape="rectangle">
             <corners android:radius="200dp" />
             <solid android:color="#464646" />
-            <!--#252021 -->
         </shape>
     </item>
     <item
@@ -30,7 +29,6 @@
 
         </shape>
     </item>
-    <!-- create the stroke for top, left, bottom and right with the dp you want -->
     <item
         android:bottom="1dp"
         android:left="1dp"

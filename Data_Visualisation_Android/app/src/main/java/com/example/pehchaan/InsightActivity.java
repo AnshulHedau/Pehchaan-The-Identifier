@@ -34,14 +34,14 @@ public class InsightActivity extends Activity {
         help_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(help_displayed) {
+                if (help_displayed) {
                     help_view.setVisibility(View.INVISIBLE);
                     help_displayed = !help_displayed;
-                }
-
-                else {
+                    findViewById(R.id.help_btn).setBackgroundResource(R.drawable.button_gradient_blue);
+                } else {
                     help_view.setVisibility(View.VISIBLE);
                     help_displayed = !help_displayed;
+                    findViewById(R.id.help_btn).setBackgroundResource(R.drawable.button_gradient_red);
                 }
             }
         });
