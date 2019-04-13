@@ -1,9 +1,9 @@
 package com.example.pehchaan;
 
-import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,7 +14,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class InsightActivity extends Activity {
+import org.puder.highlight.HighlightManager;
+
+public class InsightActivity extends FragmentActivity {
 
     private boolean help_displayed = false;
 
@@ -30,6 +32,18 @@ public class InsightActivity extends Activity {
 
         TextView help_btn = findViewById(R.id.help_btn);
         final LinearLayout help_view = findViewById(R.id.help_values);
+
+        HighlightManager highlightManager = new HighlightManager(this);
+        highlightManager.reshowAllHighlights();
+
+        highlightManager.addView(R.id.tv_m2).setTitle(R.string.title_1)
+                .setDescriptionId(R.string.highlight_1);
+        highlightManager.addView(R.id.tv_m1).setTitle(R.string.title_2)
+                .setDescriptionId(R.string.highlight_2);
+        highlightManager.addView(R.id.tv_m3).setTitle(R.string.title_3)
+                .setDescriptionId(R.string.highlight_3);
+        highlightManager.addView(R.id.help_btn).setTitle(R.string.title_4)
+                .setDescriptionId(R.string.highlight_4);
 
         help_btn.setOnClickListener(new View.OnClickListener() {
             @Override
