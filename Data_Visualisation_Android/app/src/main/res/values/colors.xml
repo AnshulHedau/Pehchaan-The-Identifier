@@ -8,8 +8,9 @@
     <color name="gradientcolorMid">#65c7f7</color>
     <color name="gradientcolorEnd">#0052D4</color>
 
-    <color name="gradientcolorStart_red">#FFE5E5</color>
-    <color name="gradientcolorMid_red">#FF6666</color>
-    <color name="gradientcolorEnd_red">#E60000</color>
+    <color name="gradientcolorStart_red">#fb9cA0</color>
+    <color name="gradientcolorMid_red">#f76565</color>
+    <color name="gradientcolorEnd_red">#D40052</color>
 </resources>
 
+    <!--FFAAAA,E60000,D91503-->

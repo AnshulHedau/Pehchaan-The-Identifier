@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/border_gradient_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_315_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_270_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_225_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_180_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_135_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_90_red"
+        android:duration="@string/animation_time" />
+    <item
+        android:drawable="@drawable/border_gradient_45_red"
+        android:duration="@string/animation_time" />
+</animation-list>

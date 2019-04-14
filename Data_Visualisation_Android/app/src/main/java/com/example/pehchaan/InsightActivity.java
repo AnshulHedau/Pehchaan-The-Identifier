@@ -1,8 +1,10 @@
 package com.example.pehchaan;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -46,16 +48,23 @@ public class InsightActivity extends FragmentActivity {
                 .setDescriptionId(R.string.highlight_4);
 
         help_btn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 if (help_displayed) {
                     help_view.setVisibility(View.INVISIBLE);
                     help_displayed = !help_displayed;
-                    findViewById(R.id.help_btn).setBackgroundResource(R.drawable.button_gradient_blue);
+                    findViewById(R.id.sensorBtn).setBackgroundResource(R.drawable.animation_gradient);
+                    View img = (View)findViewById(R.id.sensorBtn);
+                    AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
+                    frameAnimation.start();
                 } else {
                     help_view.setVisibility(View.VISIBLE);
                     help_displayed = !help_displayed;
-                    findViewById(R.id.help_btn).setBackgroundResource(R.drawable.button_gradient_red);
+                    findViewById(R.id.sensorBtn).setBackgroundResource(R.drawable.animation_gradient_red);
+                    View img = (View) findViewById(R.id.sensorBtn);
+                    AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
+                    frameAnimation.start();
                 }
             }
         });
