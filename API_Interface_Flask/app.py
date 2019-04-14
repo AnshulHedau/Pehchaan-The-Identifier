@@ -61,7 +61,7 @@ def predict():
      percentage_predictions = clf.predict_proba(inputarray)
 
      percentage_predictions = np.array(percentage_predictions.tolist())
-     db.child("confidence_values").set({"material_1":percentage_predictions[0][0], "material_2":percentage_predictions[0][1], "material_3":percentage_predictions[0][2])
+     db.child("confidence_values").set({"material_1":percentage_predictions[0][0], "material_2":percentage_predictions[0][1], "material_3":percentage_predictions[0][2]})
 
      return jsonify({'prediction': list(prediction),'ceramics':percentage_predictions[0][0],
                      'plastic':percentage_predictions[0][1],'wood':percentage_predictions[0][2]})
