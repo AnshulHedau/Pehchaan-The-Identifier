@@ -3,13 +3,13 @@
 
     <string name="animation_time">100</string>
 
-    <string name="title_1">Ceramics</string>
-    <string name="title_2">Plastic</string>
+    <string name="title_1">Plastic</string>
+    <string name="title_2">Ceramics</string>
     <string name="title_3">Wood</string>
-    <string name="title_4">Help</string>
+    <string name="title_4">Fetch</string>
 
-    <string name="highlight_1">Welcome! This value corresponds to the confidence value for Ceramics.</string>
-    <string name="highlight_2">Next, this value corresponds to the confidence value for Plastic.</string>
-    <string name="highlight_3">At last, this value corresponds to the confidence value for Wood.</string>
-    <string name="highlight_4">This button will display the locations of the different materials.</string>
+    <string name="highlight_1">Welcome! This value corresponds to the confidence value for plastic material.</string>
+    <string name="highlight_2">Next, this value corresponds to the confidence value for ceramic material.</string>
+    <string name="highlight_3">At last, this value corresponds to the confidence value for wooden material.</string>
+    <string name="highlight_4">This button is used to fetch the latest confidence values.</string>
 </resources>

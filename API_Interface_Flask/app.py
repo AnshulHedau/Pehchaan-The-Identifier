@@ -43,34 +43,28 @@ def predict():
      
      myvar = request.args["myvar"]
      parameter_list = myvar.split(',')
-     
-     myvar = parameter_list[0]
-     upper_value = int(parameter_list[1])
-     lower_value = int(parameter_list[2])
-     
-     len_array = len(myvar)
+
      list_filtered_values = []
-     
-     for i in range(0,len_array):
-         if (myvar[i] == '0'):
-             list_filtered_values.append(lower_value)
-         else:
-             list_filtered_values.append(upper_value)
-     
+
+     for i in range(0,len(parameter_list)):
+        list_filtered_values.append(float(parameter_list[i]))
+
+
      inputarray = []
      inputarray.append([np.amin(list_filtered_values), np.amax(list_filtered_values), np.ptp(list_filtered_values),
                            np.percentile(list_filtered_values,75), np.percentile(list_filtered_values,25),
                            np.median(list_filtered_values),np.mean(list_filtered_values),np.std(list_filtered_values),
                            np.var(list_filtered_values),scipy.stats.kurtosis(list_filtered_values),
                            scipy.stats.skew(list_filtered_values)])
-                           
+
      prediction = clf.predict(inputarray)
      percentage_predictions = clf.predict_proba(inputarray)
-     
+
      percentage_predictions = np.array(percentage_predictions.tolist())
-     db.child("confidence_values").set({"material_1":percentage_predictions[0][0], "material_2":123, "material_3":13, "material_4":1})
-     
-     return jsonify({'prediction': list(prediction),'ceramics':percentage_predictions[0][0],'plastic':percentage_predictions[0][1],'wood':0,'metal':0})
+     db.child("confidence_values").set({"material_1":percentage_predictions[0][0], "material_2":percentage_predictions[0][1], "material_3":percentage_predictions[0][2]})
+
+     return jsonify({'prediction': list(prediction),'ceramics':percentage_predictions[0][0],
+                     'plastic':percentage_predictions[0][1],'wood':percentage_predictions[0][2]})
 
 
 # Error page
