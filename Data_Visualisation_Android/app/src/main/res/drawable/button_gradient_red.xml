@@ -18,9 +18,9 @@
             <corners android:radius="200dp" />
             <gradient
                 android:angle="0"
-                android:centerColor="@color/gradientcolorMid_red"
-                android:endColor="@color/gradientcolorEnd_red"
-                android:startColor="@color/gradientcolorStart_red" />
+                android:centerColor="@color/gradientcolorMid"
+                android:endColor="@color/gradientcolorEnd"
+                android:startColor="@color/gradientcolorStart" />
             <padding
                 android:bottom="2dp"
                 android:left="2dp"

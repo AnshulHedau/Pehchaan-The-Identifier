@@ -32,7 +32,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -88,7 +88,7 @@
                     android:layout_height="28dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="28dp"
                     android:background="@mipmap/ic_launcher"
                     android:textAlignment="center" />
 
@@ -121,7 +121,7 @@
                     android:layout_centerVertical="true"
                     android:background="@drawable/button_gradient_blue"
                     android:gravity="center"
-                    android:text="fetch"
+                    android:text="Fetch"
                     android:textAlignment="center"
                     android:textColor="#FFF"
                     android:textSize="18sp"
