@@ -1,5 +1,5 @@
 // Declaring the required Arduino pins
-const int trigPin = 2;
+const int trigPin = 3;
 const int analogPin = A0;
 
 // Declaring a global variable
