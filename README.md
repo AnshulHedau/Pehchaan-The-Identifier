@@ -38,6 +38,10 @@ In this project, we devise a novel method for **detection of the material of an 
 
 
 ## Results
+We have identified a robust technique for the detection of the material of any object with the use of an ultrasonic sensor. The extraction of 11 different parameters formed a very important part of the analysis of the datasets to allow for successful prediction of the material with the use of any testing data. 
+
+The below plot on the left shows the values for the different materials and the one of the right shows the distribution of mean & median for the data.
+<p align = "center"><img src="Pictures/result_1.png" width="49%"></img> <img src="Pictures/result_2.png" width="49%"></img></p>
 
 
 ## Project details
