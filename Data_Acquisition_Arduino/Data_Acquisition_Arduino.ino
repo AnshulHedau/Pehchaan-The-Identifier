@@ -19,12 +19,12 @@ void loop() {
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
 
-  // Sets the trigPin on HIGH state for 10 micro seconds
+  // Sets the trigPin on HIGH state for 10 microseconds
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
   
-  // Reads the analogPin, returns an analog value in integer format
+  // Reads the analogPin and returns an integer analog value
   analog_value = pulseIn(analogPin, HIGH);
   
   // Printing the analog value

@@ -19,8 +19,6 @@ import org.puder.highlight.HighlightManager;
 
 public class InsightActivity extends FragmentActivity {
 
-    private boolean help_displayed = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +31,9 @@ public class InsightActivity extends FragmentActivity {
 
         TextView fetch_btn = findViewById(R.id.fetch_btn);
 
+        //region Highlight code
         HighlightManager highlightManager = new HighlightManager(this);
-//        highlightManager.reshowAllHighlights();
+        highlightManager.reshowAllHighlights();
 
         highlightManager.addView(R.id.tv_m2).setTitle(R.string.title_1)
                 .setDescriptionId(R.string.highlight_1);
@@ -44,15 +43,15 @@ public class InsightActivity extends FragmentActivity {
                 .setDescriptionId(R.string.highlight_3);
         highlightManager.addView(R.id.fetch_btn).setTitle(R.string.title_4)
                 .setDescriptionId(R.string.highlight_4);
+        //endregion
 
         final DatabaseReference database_rf = FirebaseDatabase.getInstance().getReference();
-
         final Handler handler = new Handler();
 
+        //region Firebase data fetching code
         fetch_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((AnimationDrawable) findViewById(R.id.sensorBtn).getBackground()).stop();
                 findViewById(R.id.sensorBtn).setBackgroundResource(R.drawable.animation_gradient_red);
 
                 View img = findViewById(R.id.sensorBtn);
@@ -79,7 +78,6 @@ public class InsightActivity extends FragmentActivity {
                                 temp_double_value = (float) temp_int_value / 100;
                                 textView_m3.setText(Html.fromHtml("<b>" + temp_double_value + "%</b>" + "<br><small>Wood</small>"));
 
-                                ((AnimationDrawable) findViewById(R.id.sensorBtn).getBackground()).stop();
                                 findViewById(R.id.sensorBtn).setBackgroundResource(R.drawable.animation_gradient);
 
                                 View img = findViewById(R.id.sensorBtn);
@@ -96,5 +94,6 @@ public class InsightActivity extends FragmentActivity {
                 }, 2500);
             }
         });
+        //endregion
     }
 }
