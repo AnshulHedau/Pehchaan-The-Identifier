@@ -16,9 +16,11 @@ In this project, we devise a novel method for **detection of the material of an 
 2. **[Data Acquisition (Arduino)](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Acquisition_Arduino)**: This folder contains the *.ino* file which is loaded in the Arduino board to allow for the collection of the related datasets.
 
 3. **[Data Analysis (Python)](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python)**: Various files related to the analysis of the collected data from the acquisition module. The various files in this folder include:
+   - **[datasets](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/datasets)** - This folder contains all the acquired datasets for the different materials.
    - **[Data Acquisition.ipynb](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/Data%20Acquisition.ipynb)** - This file uses the Python libraries to get data from the serial port of Arduino board and store them in CSV files.
    - **[Data Classification.ipynb](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/Data%20Classification.ipynb)** - The visualisation of the data, extraction of the parameters and training of SVM algorithm is done in this file.
-   - **[datasets](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/datasets)** - This folder contains all the acquired datasets for the different materials.
+   - **[Offline Prediction.ipynb](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/Offline%20Prediction.ipynb)** - This file allows for the offline prediction of the material with the pre-trained model.
+   - **[Online Prediction.ipynb](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Analysis_Python/Online%20Prediction.ipynb)** - This file does the required processing of the acquired data and sends them to Heroku API for prediction purposes.
    
 4. **[Data Visualisation (Android)](https://github.com/Dheeraj1998/Pehchaan/tree/master/Data_Visualisation_Android)**: This folder has the consumer facing Android application which displays the confidence values for the different materials.
 
