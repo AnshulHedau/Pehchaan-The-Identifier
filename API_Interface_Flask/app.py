@@ -48,14 +48,12 @@ def predict():
 
      for i in range(0,len(parameter_list)):
         list_filtered_values.append(float(parameter_list[i]))
-
-
+        
+	
      inputarray = []
      inputarray.append([np.amin(list_filtered_values), np.amax(list_filtered_values), np.ptp(list_filtered_values),
                            np.percentile(list_filtered_values,75), np.percentile(list_filtered_values,25),
-                           np.median(list_filtered_values),np.mean(list_filtered_values),np.std(list_filtered_values),
-                           np.var(list_filtered_values),scipy.stats.kurtosis(list_filtered_values),
-                           scipy.stats.skew(list_filtered_values)])
+                           np.median(list_filtered_values),np.mean(list_filtered_values)])
 
      prediction = clf.predict(inputarray)
      percentage_predictions = clf.predict_proba(inputarray)
@@ -63,7 +61,7 @@ def predict():
      percentage_predictions = np.array(percentage_predictions.tolist())
      db.child("confidence_values").set({"material_1":percentage_predictions[0][0], "material_2":percentage_predictions[0][1], "material_3":percentage_predictions[0][2]})
 
-     return jsonify({'prediction': list(prediction),'ceramics':percentage_predictions[0][0],
+     return jsonify({'ceramics':percentage_predictions[0][0],
                      'plastic':percentage_predictions[0][1],'wood':percentage_predictions[0][2]})
 
 
