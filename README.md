@@ -7,17 +7,17 @@ In this project, we devise a novel method for **detection of the material of an 
 - **Machine learning module**: These are fed into an SVM algorithm which is able to predict the material with considerable accuracy. 
 - **Consumer module**: A companion mobile application has been developed which would allow the user to directly see the predictions.
 
-# Component diagram
+## Component diagram
+<p align = "center"><img src="Pictures/Component Diagram.png"></img></p>
+
+## Experimental setup
+<p align = "center"><img src="Pictures/Experimental Setup.jpeg" width="49%"></img> <img src="Pictures/Working.gif" width="49%"></img></p>
+
+## Android application
 
 
-# Experimental setup
+## Results
 
 
-# Android application
-
-
-# Conclusion
-
-
-# Other details
+## Other details
 This project was developed as part of our final year project of B.Tech - Computer Science at Vellore Institute of Technology, Vellore. The group consisted of [Anshul Hedau](https://www.linkedin.com/in/anshul-hedau) and [Dheeraj Nair](https://www.linkedin.com/in/dheeraj1998).
