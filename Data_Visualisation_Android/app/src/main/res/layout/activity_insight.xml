@@ -12,11 +12,11 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="5dp"
         android:text="PEHCHAAN"
         android:textAlignment="center"
         android:textColor="@color/gradientcolorMid"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <TextView
@@ -24,10 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
-        android:text="The Identifier"
+        android:text="the identifier"
         android:textAlignment="center"
         android:textColor="@color/gradientcolorStart"
-        android:textSize="22sp" />
+        android:textSize="18sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
