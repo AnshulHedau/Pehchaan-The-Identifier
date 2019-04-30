@@ -1,4 +1,11 @@
 # Pehchaan-The-Identifier 
+
+<p align = "center"><img src="../Pictures/App Logo.png" width = 10%"></img></p>
+
+_Pehchaan_ is the Hindi term for *"recognise"*. 
+
+In this project, we devise a novel method for **detection of the material of an object**. This proof-of-concept consists of an ultrasonic sensor being kept at an established distance from the material.
+
 ## API-Interface-Flask
 
 ### Endpoints Details
