@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pehchaan</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBJqYncSdJGtQ3DHAcpm6LfwGfvps6WW-c",
+            authDomain: "pehchaan-eb1a1.firebaseapp.com",
+            databaseURL: "https://pehchaan-eb1a1.firebaseio.com",
+            storageBucket: "pehchaan-eb1a1.appspot.com"
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+        function update(path,key)
+        {
+            console.log(path+'/'+key);
+            var value_aquired = document.getElementById(path+'/'+key).value;
+            console.log(value_aquired);
+            var json = { };
+            json[key] = value_aquired;
+            firebase.database().ref().child(path)
+                .update(json);
+            alert("updates");
+        }
+
+
+        function display_offer() {
+            console.log("daily_offer");
+            material_array = ['Ceramics','Plastics','Wood']
+            var offer_card = '';
+            var groupRef = firebase.database().ref('confidence_values/').once('value').then(function(snapshot) {
+                var data = (snapshot.val());
+                var key_num = snapshot.numChildren();
+                console.log(data, key_num);
+                for (i = 0; i < key_num; i++) {
+                    var key_first = Object.keys(snapshot.val())[i];
+                    var val_first = Object.values(snapshot.val())[i];
+                    console.log(material_array[i]+":"+key_first+" : "+val_first);
+                    offer_card += "<div class='card'><div class='card-body'><h4 class='card-title'><a>"+material_array[i]+"</a></h4><input type='text' size='60'  id='daily_offer/"+key_first+"' value='"+val_first*100+"%' readonly>";
+                    offer_card += "</div></div>";
+                }
+                offer_card += "<button value='Refresh Page' style='margin-top:40px;background-color: teal;color: aliceblue' onClick='window.location.reload()'>Reload Page</button>";
+
+            });
+            
+            setTimeout(tabledisplay, 1000);
+            function tabledisplay() {
+                document.getElementById("offer-bar").innerHTML = offer_card;
+                console.log(offer_card);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark teal">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#" style="font-family: 'Titillium Web', sans-serif;text-align: center; margin: auto;"><b>PEHCHAAN : </b><small>The Identifier</small><//a>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+    <div id="offer-bar" style="margin-top: 40px;">
+        <button onclick="display_offer()" style="background-color: teal;padding: 10px;color: aliceblue">Click to view prediction</button>
+    </div>
+    
+    <footer class="page-footer font-small teal fixed-bottom">
+        
+        <div class="footer-copyright text-center py-2">
+            <a href="#">CAPSTONE PROJECT - ANSHUL | DHEERAJ</a>
+        </div>
+
+    </footer>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
+</body>
+</html>

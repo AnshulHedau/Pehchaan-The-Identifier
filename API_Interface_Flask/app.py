@@ -7,7 +7,7 @@ import requests
 import time
 
 from datetime import datetime, timedelta
-from flask import Flask, jsonify, request, redirect, url_for
+from flask import Flask, jsonify, request, redirect, url_for,render_template
 from sklearn.externals import joblib
 
 
@@ -34,6 +34,9 @@ def index():
     json_string = json.dumps(return_value)
     return json_string
 
+@app.route('/view')
+def view():
+    return render_template('prediction.html')
 
 # Prediction page
 @app.route('/predict', methods=['GET'])
