@@ -1,17 +1,25 @@
-# Pehchaan-The-Identifier 
+# API Interface (Flask)
+The base URL for all the endpoints is: `https://improved-pancakes.herokuapp.com`
 
-<p align = "center"><img src="../Pictures/App Logo.png" width = 10%"></img></p>
+## Endpoints details
+1. **[Landing page](https://improved-pancakes.herokuapp.com/)**: This is the landing page which informs us about the working status of the API.
 
-_Pehchaan_ is the Hindi term for *"recognise"*. 
+2. **[Prediction view](https://improved-pancakes.herokuapp.com/predict?myvar="Values")**: This is the API endpoint for the prediction module. This endpoint requires values from the acquired signal which are to be separated with *comma*. The machine learning model from the PKL model file is applied and the confidence probability of the material to which the signal value can correspond to are returned. The usage is as follows:
 
-In this project, we devise a novel method for **detection of the material of an object**. This proof-of-concept consists of an ultrasonic sensor being kept at an established distance from the material.
+Example:
+```
+https://improved-pancakes.herokuapp.com/predict?myvar=411.0,417.0,6.0,417.0,411.0,417.0,414.54,400,400
+```
 
-## API-Interface-Flask
+Response:
+```js
+{
+  "ceramics": 0.3868728179715129, 
+  "plastic": 0.5325918258474323, 
+  "wood": 0.08053535618105478
+}
+```
 
-### Endpoints Details
-1. **[Landing Page](https://improved-pancakes.herokuapp.com/)**: This is the basic landing page to tell the working status of the API.
+3. **[Result view](https://improved-pancakes.herokuapp.com/view)**: This website is a consumer-facing application which displays the confidence values for the different materials.
 
-2. **[Prediction (/predict)](https://improved-pancakes.herokuapp.com/predict?myvar="Values")**: This is the main API endpoint for the prediction module. This takes the signal values from the acquisition module and apply the machine learning model based on the pkl model file. This returns the confidence probability of which material the signal value can correspond. 
-Endpoint Format - /predict?myvar="Values" where Values are the comma seperated signal values.
-
-3. **[Result Page (/view)](https://improved-pancakes.herokuapp.com/view)**: The Website is the consumer facing Web application which displays the confidence values for the different materials.
+<p align = "center"><img src="../Pictures/Website.png"></img></p>
