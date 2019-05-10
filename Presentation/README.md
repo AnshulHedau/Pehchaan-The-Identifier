@@ -1,6 +1,6 @@
 # Pehchaan - The Identifier
 
-<p align = "center"><img src="Pictures/App Logo.png" width = 10%"></img></p>
+<p align = "center"><img src="../Pictures/App Logo.png" width = 10%"></img></p>
     
 ## Presentation
 <p align = "center"><img src="Slides/Slide-0001.jpg"></img></p>
